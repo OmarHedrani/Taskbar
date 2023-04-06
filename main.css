@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    width: 800px;
+    margin:30px auto 0;
+    background-color: #f6f6f6;
+}
+.container .add-task{
+    padding: 15px;
+    background-color: rgb(86, 22, 189);
+    position: relative;
+}
+.add-task input{
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    width: calc(100% - 25px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 20px;   
+}
+.add-task .plus{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 18px;
+    text-align: center;
+    font-size:45px;
+    transition: transform 0.3s;
+}
+.add-task .plus:hover{
+    transform: rotate(90deg);
+}
+.task-content{
+    padding: 15px;
+}
+.task-content .no-task-massge{
+   font-size: 15px;
+   color: #777;
+}
+.task-content > span{
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+}
+.task-content>span:not(:last-child){
+margin-bottom: 10px;
+}
+.task-content .task-box .delete{
+    float: right;
+    background-color: #e91e63;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+ .task-content  .finshed{
+  text-decoration: line-through;
+  
+}
+.task-status{
+    overflow: hidden;
+    margin: 10px auto;
+    width: 600px;
+    font-size: 12px;
+}
+.task-status .task-count{
+   width: 50%;
+   float: left;
+   padding: 10px;
+   font-size: 18px;
+}
+
+.task-status .completed-task{
+    width: 50%;
+        float: right;
+        padding: 10px;
+        font-size: 18px;
+        text-align: right;
+}
+
+.task-status .task-count span ,
+.task-status .completed-task span{
+    font-size: 14px;
+    color: white;
+    padding: 2px 6px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.task-status .task-count span{
+    background-color: #e91e63;
+}
+.task-status .completed-task span{
+    background-color: #03A9f4;
+}
